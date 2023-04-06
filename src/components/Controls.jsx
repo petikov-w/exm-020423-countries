@@ -2,15 +2,15 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import { Search } from './Search';
-// import { CustomSelect } from './CustomSelect';
+import { CustomSelect } from './CustomSelect';
 
-// const options = [
-//   { value: 'Africa', label: 'Africa' },
-//   { value: 'America', label: 'America' },
-//   { value: 'Asia', label: 'Asia' },
-//   { value: 'Europe', label: 'Europe' },
-//   { value: 'Oceania', label: 'Oceania' },
-// ];
+const options = [
+  { value: 'Africa', label: 'Africa' },
+  { value: 'America', label: 'America' },
+  { value: 'Asia', label: 'Asia' },
+  { value: 'Europe', label: 'Europe' },
+  { value: 'Oceania', label: 'Oceania' },
+];
 
 const Wrapper = styled.div`
   display: flex;
@@ -37,15 +37,15 @@ export const Controls = ({ onSearch }) => {
 
   return (
     <Wrapper>
-      <Search search={search} setSearch={setSearch} />
-      {/* <CustomSelect
+      <Search search={search} setSearch={setSearch} />      
+      <CustomSelect
         options={options}
-        placeholder="Filter by Region"
-        isClearable
-        isSearchable={false}
-        value={region}
-        onChange={setRegion}
-      /> */}
+        // placeholder="Filter by Region"
+        // isClearable
+        // isSearchable={false}
+        // value={region}
+        // onChange={setRegion}
+      />
     </Wrapper>
   );
 };
